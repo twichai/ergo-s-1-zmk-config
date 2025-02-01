@@ -12,6 +12,20 @@
 #define FN  1
 
 / {
+    combos {
+        compatible = "zmk,combos";
+
+        symbol {
+            bindings = <&mo 2>;
+            key-positions = <32 33 31>;
+        };
+
+        num {
+            bindings = <&mo 2>;
+            key-positions = <28 27 26>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -29,12 +43,12 @@
 &kp DEL         &kp Q      &kp W             &kp E           &kp R                 &kp T                                                                                     &kp Y      &kp U                  &kp I            &kp O              &kp P      &kp BACKSLASH
 &kp ESCAPE      &kp A      &kp S             &kp D           &kp F                 &kp G                                                                                     &kp H      &kp J                  &kp K            &kp L              &kp SEMI   &kp SQT
 &kp LEFT_SHIFT  &kp Z      &kp X             &kp C           &kp V                 &kp B                     &kp LCTRL  &kp LEFT_ALT    &kp RIGHT_ALT  &kp RCTRL             &kp N      &kp M                  &kp COMMA        &kp PERIOD         &kp SLASH  &kp RIGHT_SHIFT
-                &kp GRAVE  &kp C_PREVIOUS    &kp LEFT        &kp RIGHT                        &kp BACKSPACE  &kp TAB    &kp LEFT_WIN    &kp RIGHT_WIN  &kp ENTER  &kp SPACE             &kp UP                 &kp DOWN         &kp C_NEXT         &none
+                &kp GRAVE  &kp C_PREVIOUS    &kp LEFT        &kp RIGHT                        &kp BACKSPACE  &kp TAB    &kp LEFT_WIN    &kp RIGHT_WIN  &kp ENTER  &kp SPACE             &kp UP                 &kp DOWN         &kp C_NEXT         &tog 1
                                                                                                                         &kp HOME        &kp END
             >;
         };
 
-        layer_2 {
+        mac {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                                                                                      &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                                                                                      &trans  &trans  &trans  &trans  &trans  &trans
@@ -45,7 +59,7 @@
             >;
         };
 
-        fn_layer {
+        sym_num {
             // ---------------------------------------------------------------------------------------------------------------------------------
             // |BT_CLR|  F1  |  F2  |  F3  |  F4  |  F5  |                                                   |      | NLCK |  =   |  /   |  *   |      |
             // |      |  F6  |  F7  |  F8  |  F9  |  F10 |                                                   |      |  7   |  8   |  9   |  -   |      |
